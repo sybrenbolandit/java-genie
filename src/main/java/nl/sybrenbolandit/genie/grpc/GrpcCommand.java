@@ -1,10 +1,14 @@
 package nl.sybrenbolandit.genie.grpc;
 
+import nl.sybrenbolandit.genie.grpc.sub.InsertIntrospectionBean;
 import picocli.CommandLine;
 
 @CommandLine.Command(
         name = "grpc",
-        description = "Says hello for now"
+        description = "Says hello for now",
+        subcommands = {
+                InsertIntrospectionBean.class
+        }
 )
 public class GrpcCommand implements Runnable {
 
